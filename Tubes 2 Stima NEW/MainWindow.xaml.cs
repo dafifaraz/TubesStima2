@@ -20,6 +20,7 @@ namespace Tubes_2_Stima_NEW
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string filepath;
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace Tubes_2_Stima_NEW
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            filepath = textbox.Text;
             Chooser choose = new Chooser();
             choose.Show();
             this.Close();
@@ -39,7 +41,10 @@ namespace Tubes_2_Stima_NEW
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.DefaultExt = ".txt";
+            dlg.Filter = "Text Files (*.txt)|*.txt";
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
             {

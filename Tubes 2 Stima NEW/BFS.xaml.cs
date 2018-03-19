@@ -23,5 +23,11 @@ namespace Tubes_2_Stima_NEW
         {
             InitializeComponent();
         }
+        public struct MatKul
+        {
+            public string _NamaMatKul;
+            public List<string> _PreRequisite;
+        }
+
     }
 }

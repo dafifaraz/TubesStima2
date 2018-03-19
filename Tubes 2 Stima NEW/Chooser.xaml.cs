@@ -22,6 +22,7 @@ namespace Tubes_2_Stima_NEW
         public Chooser()
         {
             InitializeComponent();
+            textboxFile.Text = System.IO.File.ReadAllText(@MainWindow.filepath);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,11 @@ namespace Tubes_2_Stima_NEW
             BFS bfs = new BFS();
             bfs.Show();
             this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
