@@ -45,11 +45,14 @@ namespace Tubes_2_Stima_NEW
             }
         }
         const int MAX_SEMESTER = 10;
+
+
         public struct _SemesterX
         {
             public int _X; //SEMESTER KE-X
             public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
         }
+
 
     }
 }

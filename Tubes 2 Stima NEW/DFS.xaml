@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tubes_2_Stima_NEW"
         mc:Ignorable="d"
-        Title="DFS" Height="450" Width="800">
+        WindowState="Maximized"
+        Title="DFS" Height="768" Width="1366">
     <Grid>
-        <TextBlock Margin="320,184,308.556,202.667" FontSize="20" Text="*VISUALISASI DFS*" RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock Margin="320,184,308.556,202.667" FontSize="20" Text="*VISUALISASI DFS*" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

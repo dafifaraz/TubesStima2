@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tubes_2_Stima_NEW"
         mc:Ignorable="d"
-        Title="BFS" Height="450" Width="800">
+        WindowState="Maximized"
+        Title="BFS" Height="768" Width="1366">
     <Grid>
-        <TextBlock Margin="297,178,331.556,208.667" FontSize="20" Text="*VISUALISASI BFS*" RenderTransformOrigin="0.5,0.5"/>
+        <TextBlock Margin="297,178,331.556,208.667" FontSize="20" Text="*VISUALISASI BFS*" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
     </Grid>
 </Window>
