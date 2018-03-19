@@ -12,8 +12,8 @@
             <RowDefinition Height="61*"/>
             <RowDefinition Height="55*"/>
             <RowDefinition Height="33*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="69*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="63*"/>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="83*"/>
         </Grid.RowDefinitions>
@@ -26,10 +26,11 @@
             <ColumnDefinition Width="93*"/>
             <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Margin="1.778,0.889,0,4" FontSize="17" Text="Masukkan nama file input, pastikan file berada di folder yang sama dengan program" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="5" Grid.Row="3" Grid.Column="1"/>
-        <TextBox Margin="1.778,2,10,0" TextChanged="TextBox_TextChanged" FontSize="15" Padding="5" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" VerticalContentAlignment="Center" />
+        <TextBlock Margin="1.778,0.889,0,4" FontSize="17" Text="Masukkan file input" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="5" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="textbox" Margin="1.778,2,10.111,0.778" TextChanged="TextBox_TextChanged" FontSize="15" Padding="5" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" VerticalContentAlignment="Center" />
         <TextBlock Margin="0.667,39,1.111,0" FontSize="40" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Text="Perancang Rencana Studi" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="3" Width="444"/>
         <Button Content="Proses" Margin="0.778,3.111,4.222,0.889" Click="Button_Click" FontSize="15" Grid.Row="6" Grid.Column="3"/>
+        <Button Content="Browse" Grid.Column="5" HorizontalAlignment="Left" Margin="9.889,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Height="46" Click="Button_Click_1" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>
