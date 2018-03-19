@@ -10,31 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Tubes_2_Stima_NEW
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BFS.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BFS : Window
     {
-        public MainWindow()
+        public BFS()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Chooser choose = new Chooser();
-            choose.Show();
-            this.Close();
         }
     }
 }

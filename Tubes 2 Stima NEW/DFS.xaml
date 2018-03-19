@@ -1,0 +1,13 @@
+﻿<Window x:Class="Tubes_2_Stima_NEW.DFS"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tubes_2_Stima_NEW"
+        mc:Ignorable="d"
+        Title="DFS" Height="450" Width="800">
+    <Grid>
+        <TextBlock Margin="320,184,308.556,202.667" FontSize="20" Text="*VISUALISASI DFS*" RenderTransformOrigin="0.5,0.5"/>
+
+    </Grid>
+</Window>
