@@ -8,7 +8,8 @@
         WindowState="Maximized"
         Title="BFS" Height="768" Width="1366">
     <Grid>
-        <TextBlock Margin="297,178,331.556,208.667" FontSize="20" Text="*VISUALISASI BFS*" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Margin="297,178,331.556,208.667" FontSize="20" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox x:Name="BFSText" HorizontalAlignment="Left" Height="721" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1342" />
 
     </Grid>
 </Window>

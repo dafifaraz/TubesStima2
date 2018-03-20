@@ -29,19 +29,16 @@ namespace Tubes_2_Stima_NEW
         public BFS()
         {
             InitializeComponent();
+            CariSolusi(ListMatKul);
         }
-        const int MAX_SEMESTER = 10;
-        public struct _SemesterX
-        {
-            public int _X; //SEMESTER KE-X
-            public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
-        }
-        public struct MatKul
-        {
-            public string _NamaMatKul;
-            public List<string> _PreRequisite;
-        }
+
+        public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
+        public static bool isSolvable = true;
         public static uint currentsp, Maxsp;
+        public int kembali()
+        {
+            return 1;
+        }
         public void CPUSpeed()
         {
             using (ManagementObject Mo = new ManagementObject("Win32_Processor.DeviceID='CPU0'"))
@@ -50,14 +47,20 @@ namespace Tubes_2_Stima_NEW
                 Maxsp = (uint)(Mo["MaxClockSpeed"]);
             }
         }
-        //
-        public void CariSolusi(List<MatKul> ListMatKulBFS)
-        {
 
-            Console.WriteLine();
-            Console.Write("CariSolusi : "); Console.WriteLine("START");
+        const int MAX_SEMESTER = 10;
+
+        public struct _SemesterX
+        {
+            public int _X; //SEMESTER KE-X
+            public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
+        }
+
+        public void CariSolusi(List<Chooser.MatKul> ListMatKulBFS)
+        {
             long start_time = Stopwatch.GetTimestamp();
 
+            //UNTUK MEMPERCEPAT ALGORITMA, YANG DISIMPAN DAN DIMANIPULASI HANYA INDEKS
             List<int> Indeks_Terpilih = new List<int>();
 
             //DEKLARASI DAN INISIALISASI
@@ -151,19 +154,18 @@ namespace Tubes_2_Stima_NEW
             long elapsed_time = stop_time - start_time;
             int NeffSemester = iSemesterX;
             iSemesterX = 0;
-            Console.Write("CariSolusi : "); Console.WriteLine("END");
-            Console.WriteLine();
             //Console.Write("Tick Elapsed ");Console.WriteLine(elapsed_time);
             //CPUSpeed();
             //double real_time = elapsed_time *1000000000 / Maxsp ;
             //Console.Write("CPU Hz ");Console.WriteLine(Maxsp);
+            /*
             Console.Write("Actual Time (nano seconds) : "); Console.WriteLine(elapsed_time);
             Console.WriteLine();
 
             Console.WriteLine("SOLUSI : ");
             for (int i = 0; i < NeffSemester; i++)
             {
-                Console.Write("Semester "); Console.Write(Array_Semester[i]._X + 1);
+                Console.Write("Semester"); Console.Write(Array_Semester[i]._X + 1);
                 Console.Write(" -> ");
                 for (int j = 0; j < Array_Semester[i]._NamaMatKul.Count; j++)
                 {
@@ -176,6 +178,7 @@ namespace Tubes_2_Stima_NEW
             Console.WriteLine("");
             Console.WriteLine("Press Any Key to Continue...");
             Console.ReadKey();
+            */
         }
 
 
