@@ -141,7 +141,7 @@ namespace TUBES2 {
 
             Console.WriteLine("SOLUSI : ");
             for(int i = 0; i < NeffSemester; i++){
-                Console.Write("Semester ");Console.Write(Array_Semester[i]._X + 1);
+                Console.Write("Semester");Console.Write(Array_Semester[i]._X + 1);
                 Console.Write(" -> ");
                 for(int j = 0; j < Array_Semester[i]._NamaMatKul.Count; j++){
 
