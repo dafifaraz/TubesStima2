@@ -52,8 +52,10 @@ namespace Tubes_2_Stima_NEW
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             input = 2;
-            BFS bfs = new BFS();
-            bfs.Show();
+            //BFS bfs = new BFS();
+            //bfs.Show();
+            VisualizerBFS vbfs = new VisualizerBFS();
+            vbfs.Show();
             this.Close();
         }
 
