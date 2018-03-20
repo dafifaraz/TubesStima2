@@ -29,16 +29,12 @@ namespace Tubes_2_Stima_NEW
         public BFS()
         {
             InitializeComponent();
-            CariSolusi(ListMatKul);
+            CariSolusi(Chooser.ListMatKul);
         }
 
-        public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
+        //public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
         public static bool isSolvable = true;
         public static uint currentsp, Maxsp;
-        public int kembali()
-        {
-            return 1;
-        }
         public void CPUSpeed()
         {
             using (ManagementObject Mo = new ManagementObject("Win32_Processor.DeviceID='CPU0'"))
@@ -180,6 +176,7 @@ namespace Tubes_2_Stima_NEW
             Console.ReadKey();
             */
         }
+        
 
 
     }
