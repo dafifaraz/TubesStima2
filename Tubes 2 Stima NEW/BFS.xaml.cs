@@ -18,11 +18,7 @@ using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Drawing;
-using Microsoft.Msagl.Core.Geometry.Curves;
-using Microsoft.Msagl.Core.Layout;
-using Point = Microsoft.Msagl.Core.Geometry.Point;
-using Rectangle = Microsoft.Msagl.Core.Geometry.Rectangle;
+
 
 namespace Tubes_2_Stima_NEW
 {
@@ -34,7 +30,7 @@ namespace Tubes_2_Stima_NEW
         public BFS()
         {
             InitializeComponent();
-            CariSolusi(Chooser.ListMatKul);
+            CariSolusi(Chooser.ListMatKul, Chooser.ListMatKul);
         }
 
         //public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
@@ -57,7 +53,7 @@ namespace Tubes_2_Stima_NEW
             public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
         }
 
-        public void CariSolusi(List<Chooser.MatKul> ListMatKulBFS)
+        public void CariSolusi(List<Chooser.MatKul> ListMatKulBFS, List<Chooser.MatKul> ListTetap)
         {
             long start_time = Stopwatch.GetTimestamp();
 
