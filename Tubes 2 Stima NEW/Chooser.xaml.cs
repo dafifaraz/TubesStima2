@@ -27,7 +27,7 @@ namespace Tubes_2_Stima_NEW
 
         //variables
         public static int input;
-        public static List<MatKul> ListMatKul;
+        public static List<MatKul> ListMatKul = new List<MatKul>();
         public static int nMatKul;
         MatKul[] Array_MatKul;
         
@@ -59,7 +59,7 @@ namespace Tubes_2_Stima_NEW
 
         public void ReadFromFile() //Implementasi dari ReadFromFile.cs
         {
-            ListMatKul = new List<MatKul>();
+            //ListMatKul = new List<MatKul>();
             string text = MainWindow.filepath;
             nMatKul = text.Length - text.Replace(".", "").Length;
             string[] lines = text.Split();

@@ -18,6 +18,11 @@ using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Drawing;
+using Microsoft.Msagl.Core.Geometry.Curves;
+using Microsoft.Msagl.Core.Layout;
+using Point = Microsoft.Msagl.Core.Geometry.Point;
+using Rectangle = Microsoft.Msagl.Core.Geometry.Rectangle;
 
 namespace Tubes_2_Stima_NEW
 {
