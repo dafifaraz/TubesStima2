@@ -14,7 +14,7 @@ namespace Tubes_2_Stima_NEW
     {
         public VisualizerBFS()
         {
-            InitializeComponent();
+            Initialize();
         }
     }
 }

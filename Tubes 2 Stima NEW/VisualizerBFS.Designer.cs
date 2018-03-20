@@ -1,46 +1,38 @@
-﻿namespace Tubes_2_Stima_NEW
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+namespace Tubes_2_Stima_NEW
 {
-    partial class VisualizerBFS
+
+    public partial class VisualizerBFS
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        public static void Initialize()
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            //create a form 
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            //create a viewer object 
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            //create a graph object 
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+            //create the graph content 
+            graph.AddEdge("A", "B");
+            graph.AddEdge("B", "C");
+            graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+            graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
+            graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
+            Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
+            c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
+            c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
+            //bind the graph to the viewer 
+            viewer.Graph = graph;
+            //associate the viewer with the form 
+            form.SuspendLayout();
+            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            form.Controls.Add(viewer);
+            form.ResumeLayout();
+            //show the form 
+            form.ShowDialog();
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // VisualizerBFS
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 971);
-            this.Name = "VisualizerBFS";
-            this.Text = "VisualizerBFS";
-            this.ResumeLayout(false);
-
-        }
-
-        #endregion
     }
 }
