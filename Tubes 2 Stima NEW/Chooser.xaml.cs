@@ -39,6 +39,7 @@ namespace Tubes_2_Stima_NEW
         {
             InitializeComponent();
             textboxFile.Text = System.IO.File.ReadAllText(@MainWindow.filepath);
+            ReadFromFile();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -46,14 +47,14 @@ namespace Tubes_2_Stima_NEW
             input = 1;
             DFS dfs = new DFS();
             dfs.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             input = 2;
-            //BFS bfs = new BFS();
-            //bfs.Show();
+            BFS bfs = new BFS();
+            bfs.Show();
             VisualizerBFS vbfs = new VisualizerBFS();
             vbfs.Show();
             this.Close();
@@ -62,7 +63,7 @@ namespace Tubes_2_Stima_NEW
         public void ReadFromFile() //Implementasi dari ReadFromFile.cs
         {
             //ListMatKul = new List<MatKul>();
-            string text = MainWindow.filepath;
+            string text = System.IO.File.ReadAllText(@MainWindow.filepath);
             nMatKul = text.Length - text.Replace(".", "").Length;
             string[] lines = text.Split();
             int isComma = 0; int iComma = 0;

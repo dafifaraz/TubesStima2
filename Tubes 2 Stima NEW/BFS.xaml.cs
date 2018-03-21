@@ -31,6 +31,7 @@ namespace Tubes_2_Stima_NEW
         {
             InitializeComponent();
             CariSolusi(Chooser.ListMatKul, Chooser.ListMatKul);
+
         }
 
         //public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
@@ -51,6 +52,11 @@ namespace Tubes_2_Stima_NEW
         {
             public int _X; //SEMESTER KE-X
             public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
+        }
+
+        private void BFSText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
         public void CariSolusi(List<Chooser.MatKul> ListMatKulBFS, List<Chooser.MatKul> ListTetap)
@@ -155,30 +161,26 @@ namespace Tubes_2_Stima_NEW
             //CPUSpeed();
             //double real_time = elapsed_time *1000000000 / Maxsp ;
             //Console.Write("CPU Hz ");Console.WriteLine(Maxsp);
-            /*
+            
             Console.Write("Actual Time (nano seconds) : "); Console.WriteLine(elapsed_time);
             Console.WriteLine();
-
-            Console.WriteLine("SOLUSI : ");
+            //BFSText.Text += (iSemesterX);
+            //Console.WriteLine("SOLUSI : ");
             for (int i = 0; i < NeffSemester; i++)
             {
-                Console.Write("Semester"); Console.Write(Array_Semester[i]._X + 1);
-                Console.Write(" -> ");
+                BFSText.Text +="Semester"; BFSText.Text += (Array_Semester[i]._X + 1);
+                BFSText.Text += " -> ";
                 for (int j = 0; j < Array_Semester[i]._NamaMatKul.Count; j++)
                 {
 
-                    Console.Write(Array_Semester[i]._NamaMatKul[j]); Console.Write(" ");
+                    BFSText.Text += (Array_Semester[i]._NamaMatKul[j]); BFSText.Text +=" ";
                 }
-                Console.WriteLine();
+                BFSText.Text += "\n";
             }
 
-            Console.WriteLine("");
-            Console.WriteLine("Press Any Key to Continue...");
-            Console.ReadKey();
-            */
+            
+            
         }
-        
-
-
+       
     }
 }

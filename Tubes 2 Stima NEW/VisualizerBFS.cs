@@ -23,7 +23,6 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 
-
 namespace Tubes_2_Stima_NEW
 {
     public partial class VisualizerBFS : Form
@@ -33,7 +32,7 @@ namespace Tubes_2_Stima_NEW
             Initialize();
             CariSolusi(Chooser.ListMatKul, Chooser.ListMatKul);
         }
-
+        //public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
         public static bool isSolvable = true;
         public static uint currentsp, Maxsp;
         public void CPUSpeed()
@@ -51,6 +50,18 @@ namespace Tubes_2_Stima_NEW
         {
             public int _X; //SEMESTER KE-X
             public List<string> _NamaMatKul; //NAMANYA, CONTOH "C1"
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // VisualizerBFS
+            // 
+            this.ClientSize = new System.Drawing.Size(1262, 955);
+            this.Name = "VisualizerBFS";
+            this.ResumeLayout(false);
+
         }
 
         public void CariSolusi(List<Chooser.MatKul> ListMatKulBFS, List<Chooser.MatKul> ListTetap)
@@ -177,8 +188,5 @@ namespace Tubes_2_Stima_NEW
             Console.ReadKey();
             */
         }
-
-
-
     }
 }
