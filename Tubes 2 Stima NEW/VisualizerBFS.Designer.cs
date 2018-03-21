@@ -16,8 +16,20 @@ namespace Tubes_2_Stima_NEW
             //create a graph object 
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             //create the graph content 
-
-
+            for (int i = 0; i < BFS.ListTetap.Count; i++)
+            {
+                if (BFS.ListTetap[i]._PreRequisite.Count == 0)
+                {
+                    graph.AddNode("Test");
+                } else
+                {
+                    for(int j = 0; j < BFS.ListTetap[i]._PreRequisite.Count; j++)
+                    {
+                        graph.AddEdge(BFS.ListTetap[i]._PreRequisite[j], BFS.ListTetap[i]._NamaMatKul);
+                    }
+                }
+            }
+            /*
             graph.AddEdge("A", "B");
             graph.AddEdge("B", "C");
             graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
@@ -26,6 +38,7 @@ namespace Tubes_2_Stima_NEW
             Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
             c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
             c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond; 
+            */
             //bind the graph to the viewer 
             viewer.Graph = graph;
             //associate the viewer with the form 

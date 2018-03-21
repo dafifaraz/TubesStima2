@@ -55,8 +55,6 @@ namespace Tubes_2_Stima_NEW
             input = 2;
             BFS bfs = new BFS();
             bfs.Show();
-            VisualizerBFS vbfs = new VisualizerBFS();
-            vbfs.Show();
             this.Close();
         }
 

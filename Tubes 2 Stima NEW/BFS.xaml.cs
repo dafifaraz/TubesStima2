@@ -31,10 +31,12 @@ namespace Tubes_2_Stima_NEW
         {
             InitializeComponent();
             CariSolusi(Chooser.ListMatKul, Chooser.ListMatKul);
-
+            VisualizerBFS vbfs = new VisualizerBFS();
+            vbfs.Show();
         }
 
         //public static List<Chooser.MatKul> ListMatKul= Chooser.ListMatKul;
+        public static List<Chooser.MatKul> ListTetap = Chooser.ListMatKul;
         public static bool isSolvable = true;
         public static uint currentsp, Maxsp;
         public void CPUSpeed()
@@ -162,8 +164,7 @@ namespace Tubes_2_Stima_NEW
             //double real_time = elapsed_time *1000000000 / Maxsp ;
             //Console.Write("CPU Hz ");Console.WriteLine(Maxsp);
             
-            Console.Write("Actual Time (nano seconds) : "); Console.WriteLine(elapsed_time);
-            Console.WriteLine();
+            BFSText.Text+=("Actual Time (nano seconds) : \n"); BFSText.Text+=(elapsed_time);
             //BFSText.Text += (iSemesterX);
             //Console.WriteLine("SOLUSI : ");
             for (int i = 0; i < NeffSemester; i++)
